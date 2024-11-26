@@ -1,0 +1,68 @@
+/* Contêiner do Toggle */
+.toggleContainer {
+    display: flex; /* Alinha os itens do toggle (switch e label) em linha */
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 10px; /* Espaçamento entre o switch e o texto */
+    position: absolute; /* Posiciona o contêiner em relação à janela */
+    top: 20px; /* Distância do topo da janela */
+    right: 20px; /* Distância da lateral direita */
+    z-index: 10; /* Garante que o toggle fique sobre outros elementos */
+    font-family: Arial, sans-serif; /* Define a fonte para o texto */
+}
+
+/* Estilo do Switch */
+.switch {
+    position: relative; /* Necessário para posicionar os elementos internos */
+    display: inline-block; /* Exibe o switch como um elemento em linha */
+    width: 50px; /* Largura do switch */
+    height: 25px; /* Altura do switch */
+}
+
+/* Esconde o input checkbox padrão */
+.switch input {
+    opacity: 0; /* Torna o input invisível */
+    width: 0; /* Remove largura */
+    height: 0; /* Remove altura */
+}
+
+/* Estilo do Slider (representa o botão deslizante) */
+.slider {
+    position: absolute; /* Posiciona o slider dentro do contêiner */
+    cursor: pointer; /* Altera o cursor para "mãozinha" */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Cor de fundo padrão do slider */
+    transition: 0.4s; /* Suaviza as mudanças de estado */
+    border-radius: 34px; /* Deixa o slider com bordas arredondadas */
+}
+
+/* Estilo do botão circular dentro do slider */
+.slider:before {
+    position: absolute; /* Posiciona o botão dentro do slider */
+    content: ''; /* Cria o conteúdo visual */
+    height: 20px; /* Altura do botão */
+    width: 20px; /* Largura do botão */
+    left: 5px; /* Distância da lateral esquerda */
+    bottom: 2.5px; /* Distância da parte inferior */
+    background-color: white; /* Cor do botão */
+    transition: 0.4s; /* Suaviza a transição ao alternar */
+    border-radius: 50%; /* Deixa o botão circular */
+}
+
+/* Quando o input está marcado, altera a cor do slider */
+input:checked + .slider {
+    background-color: #4caf50; /* Cor de fundo para o estado "on" */
+}
+
+/* Move o botão circular para a direita quando o input está marcado */
+input:checked + .slider:before {
+    transform: translateX(24px); /* Move o botão 24px para a direita */
+}
+
+/* Estilo do Label */
+.label {
+    font-size: 14px; /* Tamanho da fonte do texto ao lado do switch */
+    color: #555; /* Cor do texto */
+}

@@ -1,0 +1,99 @@
+/* Reset básico para remover margens e espaçamentos padrão de navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões */
+}
+
+/* Estilo aplicado ao elemento HTML principal */
+html {
+  background-color: var(--background); /* Cor de fundo dinâmica com base no tema */
+  color: var(--text-color); /* Cor do texto dinâmica com base no tema */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave entre os temas */
+}
+
+/* Estilo aplicado ao corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte global */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+  display: flex; /* Alinha o conteúdo no centro */
+  flex-direction: column; /* Disposição em coluna */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Tema Escuro: Define variáveis CSS para cores */
+.dark-theme {
+  --background: #121212; /* Fundo escuro */
+  --text-color: #ffffff; /* Texto branco */
+  --button-bg: #ff6251; /* Fundo dos botões */
+  --button-text: #ffffff; /* Cor do texto dos botões */
+  --seat-free: #4caf50; /* Cor para assentos livres */
+  --seat-selected: #ff9800; /* Cor para assentos selecionados */
+  --seat-taken: #f44336; /* Cor para assentos ocupados */
+}
+
+/* Tema Claro: Define variáveis CSS para cores */
+.light-theme {
+  --background: #f1e7e7; /* Fundo claro */
+  --text-color: #000000; /* Texto preto */
+  --button-bg: #419f13; /* Fundo dos botões */
+  --button-text: #000000; /* Cor do texto dos botões */
+  --seat-free: #171e19; /* Cor para assentos livres */
+  --seat-selected: #2c790b; /* Cor para assentos selecionados */
+  --seat-taken: #a08687; /* Cor para assentos ocupados */
+}
+
+/* Estilo base para botões */
+button {
+  background-color: var(--button-bg); /* Cor de fundo com base no tema */
+  color: var(--button-text); /* Cor do texto com base no tema */
+  border: none; /* Remove bordas padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de "mãozinha" ao passar o mouse */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+button:hover {
+  opacity: 0.9; /* Efeito de opacidade ao passar o mouse */
+}
+
+/* Estilo para os assentos */
+.seat {
+  background-color: var(--seat-free); /* Cor para assentos livres */
+  width: 40px; /* Largura fixa */
+  height: 40px; /* Altura fixa */
+  margin: 5px; /* Espaçamento entre os assentos */
+  border-radius: 5px; /* Bordas arredondadas */
+  display: inline-block; /* Permite que fiquem lado a lado */
+  transition: background-color 0.3s; /* Transição suave ao mudar o estado */
+}
+
+.seat.selected {
+  background-color: var(--seat-selected); /* Cor para assentos selecionados */
+}
+
+.seat.taken {
+  background-color: var(--seat-taken); /* Cor para assentos ocupados */
+  cursor: not-allowed; /* Cursor de bloqueado */
+}
+
+/* Container principal da página */
+.container {
+  width: 90%; /* Largura responsiva */
+  max-width: 1200px; /* Limita a largura máxima */
+}
+
+/* Estilo para o título principal */
+.titleSection h1 {
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}
+
+/* Estilo para o subtítulo */
+.titleSection h2 {
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}

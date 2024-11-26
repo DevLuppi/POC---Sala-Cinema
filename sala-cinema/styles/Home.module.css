@@ -1,0 +1,176 @@
+/* Contêiner Principal */
+.container {
+  background-color: var(--background); /* Fundo dinâmico baseado no tema */
+  color: var(--text-color); /* Cor do texto baseado no tema */
+  padding: 20px; /* Espaçamento interno */
+  display: flex; /* Flexbox para alinhar os elementos */
+  flex-direction: column; /* Disposição em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza a mudança de cores ao alternar o tema */
+}
+
+/* Seção do Título */
+.titleSection {
+  margin-bottom: 20px; /* Espaço inferior */
+  text-align: center; /* Centraliza o texto */
+}
+
+.titleSection h1 {
+  font-size: 2.5rem; /* Tamanho do título principal */
+  margin: 0; /* Remove margens padrão */
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}
+
+.titleSection h2 {
+  font-size: 1.5rem; /* Tamanho do subtítulo */
+  margin-top: 10px; /* Espaçamento superior */
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}
+
+/* Layout Principal */
+.mainContent {
+  display: flex; /* Flexbox para alinhar os elementos */
+  flex-direction: row; /* Disposição em linha */
+  gap: 40px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  width: 100%; /* Largura completa */
+  max-width: 1200px; /* Largura máxima */
+  margin-bottom: 40px; /* Espaço inferior */
+}
+
+/* Seção de Assentos */
+.seatSection {
+  flex: 1; /* Faz a seção ocupar o espaço disponível */
+  display: flex; /* Flexbox para alinhar os elementos */
+  flex-direction: column; /* Disposição em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.seatGrid {
+  display: grid; /* Grade para organizar os assentos */
+  grid-template-columns: repeat(8, 40px); /* 8 colunas fixas */
+  gap: 10px; /* Espaçamento entre os assentos */
+  margin: 20px 0; /* Espaçamento vertical */
+}
+
+.seat {
+  background-color: var(--seat-free); /* Cor dinâmica para assentos livres */
+  width: 40px; /* Largura fixa */
+  height: 40px; /* Altura fixa */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de "mãozinha" para indicar interatividade */
+  transition: background-color 0.3s; /* Transição suave ao mudar de estado */
+}
+
+.seat.selected {
+  background-color: var(--seat-selected); /* Cor para assentos selecionados */
+}
+
+.seat.taken {
+  background-color: var(--seat-taken); /* Cor para assentos ocupados */
+  cursor: not-allowed; /* Cursor indicando que não pode ser clicado */
+}
+
+/* Barra da Tela */
+.screen {
+  margin: 20px 0; /* Espaçamento vertical */
+  width: 100%; /* Largura completa */
+  max-width: 400px; /* Largura máxima */
+  height: 20px; /* Altura fixa */
+  background-color: #444; /* Cor de fundo fixa */
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  line-height: 20px; /* Centraliza o texto verticalmente */
+  border-radius: 10px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho do texto */
+}
+
+/* Legenda */
+.legend {
+  display: flex; /* Flexbox para organizar os itens lado a lado */
+  gap: 20px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  margin-top: 20px; /* Espaço superior */
+}
+
+.legendItem {
+  display: flex; /* Flexbox para organizar ícone e texto lado a lado */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 5px; /* Espaçamento entre ícone e texto */
+}
+
+.legendItem span {
+  font-size: 16px; /* Tamanho da fonte */
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}
+
+/* Informações do Filme */
+.movieInfo {
+  flex: 1; /* Faz a seção ocupar o espaço disponível */
+  display: flex; /* Flexbox para alinhar os textos */
+  flex-direction: column; /* Disposição em coluna */
+  justify-content: flex-start; /* Alinha os itens ao topo */
+  margin-top: 40px; /* Espaço superior */
+  padding-left: 20px; /* Espaçamento lateral */
+  gap: 20px; /* Espaçamento entre os textos */
+}
+
+.movieInfo p {
+  font-size: 18px; /* Tamanho do texto */
+  line-height: 1.8; /* Espaçamento entre linhas */
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}
+
+.movieInfo strong {
+  font-size: 20px; /* Tamanho maior para destacar títulos */
+  color: var(--text-color); /* Cor dinâmica com base no tema */
+}
+
+/* Botão de Compra */
+.buySection {
+  width: 100%; /* Largura completa */
+  display: flex; /* Flexbox para centralizar o botão */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 20px; /* Espaço superior */
+}
+
+.buyButton {
+  background-color: var(--button-bg); /* Cor dinâmica com base no tema */
+  color: var(--button-text); /* Cor dinâmica para o texto */
+  border: none; /* Remove bordas padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Cursor de "mãozinha" */
+  transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+.buyButton:hover {
+  opacity: 0.9; /* Reduz a opacidade ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 20px; /* Espaçamento entre os itens */
+  }
+
+  .seatGrid {
+    grid-template-columns: repeat(8, 40px); /* Mantém 8 colunas mesmo em telas pequenas */
+  }
+
+  .movieInfo {
+    display: none; /* Oculta a descrição em telas pequenas */
+  }
+
+  .buyButton {
+    font-size: 16px; /* Reduz o tamanho da fonte */
+    padding: 10px 20px; /* Ajusta o espaçamento */
+  }
+}

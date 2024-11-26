@@ -1,0 +1,26 @@
+/* Classe base para o estilo dos assentos */
+.seat {
+    width: 40px; /* Define a largura fixa de cada assento */
+    height: 40px; /* Define a altura fixa de cada assento */
+    border-radius: 5px; /* Arredonda os cantos do assento */
+    display: flex; /* Torna o assento um contêiner flexível */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo (caso exista) */
+    align-items: center; /* Centraliza verticalmente o conteúdo (caso exista) */
+    cursor: pointer; /* Mostra o cursor de "mãozinha" indicando que é interativo */
+}
+
+/* Classe para assentos livres */
+.free {
+    background-color: #4caf50; /* Verde, indicando que o assento está disponível */
+}
+
+/* Classe para assentos selecionados */
+.selected {
+    background-color: #ff9800; /* Laranja, indicando que o assento foi selecionado */
+}
+
+/* Classe para assentos ocupados */
+.taken {
+    background-color: #f44336; /* Vermelho, indicando que o assento está ocupado */
+    cursor: not-allowed; /* Indica que o assento não pode ser clicado */
+}
