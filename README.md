@@ -4,6 +4,16 @@ Um sistema interativo para seleção de assentos em uma sala de cinema. Este pro
 
 ---
 
+## Autores
+
+- **Leonardo Luppi Vanni**  
+  RA: 10436603
+
+- **Pedro Henrique Gonçalves**  
+  RA: 10439486
+
+---
+
 ## 🚀 Funcionalidades
 
 - **Seleção de Assentos**: Escolha entre assentos disponíveis, com estados visuais diferenciados (livre, selecionado e ocupado).
