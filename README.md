@@ -24,7 +24,7 @@ Um sistema interativo para seleção de assentos em uma sala de cinema. Este pro
 ## 📂 Estrutura do Projeto
 
 ```plaintext
-📁 projeto-cinema
+📁 sala-cinema
 ├── 📁 components
 │   ├── Seat.js               # Componente individual de assento
 │   ├── Seat.module.css       # Estilos do componente de assento
