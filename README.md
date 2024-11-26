@@ -27,7 +27,9 @@ Um sistema interativo para seleção de assentos em uma sala de cinema. Este pro
 📁 projeto-cinema
 ├── 📁 components
 │   ├── Seat.js               # Componente individual de assento
+│   ├── Seat.module.css       # Estilos do componente de assento
 │   ├── ThemeToggle.js        # Alternância de tema Light/Dark
+│   └── ThemeToggle.module.css # Estilos do botão de alternância de tema
 ├── 📁 context
 │   └── ThemeContext.js       # Contexto para gerenciamento do tema
 ├── 📁 pages
@@ -37,8 +39,7 @@ Um sistema interativo para seleção de assentos em uma sala de cinema. Este pro
 │   └── movieData.json        # Dados do filme e assentos
 ├── 📁 styles
 │   ├── globals.css           # Estilos globais
-│   ├── Home.module.css       # Estilos específicos da página principal
-│   └── ThemeToggle.module.css # Estilos do botão de alternância de tema
+│   └── Home.module.css       # Estilos específicos da página principal
 └── package.json              # Configuração do projeto e dependências
 ```
 
